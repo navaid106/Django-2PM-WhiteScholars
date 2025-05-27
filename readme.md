@@ -1,0 +1,1 @@
+https://github.com/navaid106/Django-2PM-WhiteScholars.git
