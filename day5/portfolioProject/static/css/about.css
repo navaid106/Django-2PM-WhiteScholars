@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color:white;
+}
+
+.container{
+    height: 100vh;
+    border:2px solid red;
+
+    display: flex;
+    gap: 90px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image img{
+    width: 250px;
+    height: 250px;
+}
+
+.about-content {
+    width: 400px;
+}
