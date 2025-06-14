@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: orange;
+}
+
+#warning{
+    background-color: black;
+    color:orange;
+    padding: 20px;
+    font-size: 30px;
+    font-family: algerian;
+    text-align: center;
+
+}
+
+#heading1{
+    background-color: black;
+    color:orange;
+    padding: 20px;
+    text-align: center;
+    font-family: algerian;
+    font-size: 32px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin:20px 5px;
+    font-size: 20px;
+    text-align: center;
+    
+}
+
+thead{
+    background-color: black;
+    color:white;
+}
+
+th,td{
+    padding:12px 15px;
+    border: 2px solid #ddd;
+}
+
+tr:hover{
+    background-color: #462d2d;
+    cursor: pointer;
+    color:white;
+}

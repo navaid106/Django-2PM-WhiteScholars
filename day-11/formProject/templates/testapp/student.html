@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1 align="center">Student Form</h1>
+    <hr size="10" color="black">
+
+    <form method="post">
+        <!-- CSRF verification -->
+        {% csrf_token %}
+        
+        <!-- python code -->
+        {{ form }}
+
+        <!-- html code for submit button -->
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

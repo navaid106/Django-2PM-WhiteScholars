@@ -1,11 +1,18 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Details</title>
+    <link rel="stylesheet" href="{% static 'css/employee.css' %}">
 </head>
+
 <body>
+    <!-- true or false -->
+    {% if emp_list %}
+    <h1 id="heading1">Employee Details</h1>
     <table border="2" cellpadding="10">
         <thead>
             <th>Emp_id</th>
@@ -15,7 +22,7 @@
             <th>Designation</th>
             <th>Email</th>
         </thead>
-        
+
         <tbody>
             <!-- ['empid','name','dob','salary','designation','email'] -->
             {% for emp in emp_list %}
@@ -30,5 +37,9 @@
             {% endfor %}
         </tbody>
     </table>
+    {% else %}
+    <h1 id="warning">No Employee Record is avaialble!!!!</h1>
+    {% endif %}
 </body>
+
 </html>
