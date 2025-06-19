@@ -5,5 +5,5 @@ from testapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('feedback/',views.feedback_view),
+    path('student/', views.student_view),
 ]
