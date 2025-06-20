@@ -4,6 +4,8 @@ from django.urls import path
 from testapp import views
 
 urlpatterns = [
+    path('',views.home_view),
     path('admin/', admin.site.urls),
     path('student/', views.student_view),
+    path('data/',views.fetchData_view),
 ]
