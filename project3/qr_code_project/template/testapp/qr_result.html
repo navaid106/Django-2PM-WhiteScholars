@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QR Code Generated | Digital Menu</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+
+  <!-- Confetti.js for subtle fun -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+      color: #333;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+
+    .navbar {
+      background: #0d6efd;
+    }
+
+    .navbar-brand {
+      color: #fff !important;
+      font-weight: bold;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    .qr-container {
+      background: white;
+      border-radius: 15px;
+      padding: 40px 30px;
+      max-width: 600px;
+      margin: 60px auto;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+      animation: slideUp 1.2s ease forwards;
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      font-weight: 600;
+      color: #0d6efd;
+      margin-bottom: 20px;
+    }
+
+    img {
+      max-width: 300px;
+      border: 2px dashed #0d6efd;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 20px;
+      animation: bounceIn 1s ease;
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0.7); opacity: 0; }
+      60% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    img:hover {
+      transform: scale(1.05) rotate(1deg);
+    }
+
+    .btn-primary {
+      background-color: #0d6efd;
+      border-color: #0d6efd;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #084fd6;
+      transform: scale(1.05);
+    }
+
+    .tagline {
+      margin-top: 25px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      background: linear-gradient(to right, #0d6efd, #6610f2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 0.5px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    @media(max-width: 768px) {
+      .qr-container {
+        margin: 30px 15px;
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body onload="startConfetti()">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">🎉 QR Code Ready!</a>
+    </div>
+  </nav>
+
+  <!-- QR Code Result -->
+  <div class="qr-container text-center animate__animated animate__fadeInUp">
+    <h2>{{ res_name }}</h2>
+
+    <img src="{{ qr_url }}" alt="QR Code">
+
+    <div>
+      <a href="{{ qr_url }}" download="{{ file_name }}" class="btn btn-primary mt-3">⬇️ Download QR Code</a>
+    </div>
+
+    <div class="tagline mt-4">
+      📲 Scan it. Share it. <strong>Slay it!</strong> 🔥
+    </div>
+    <small class="text-muted">Thanks for keeping it digital and cool with us 😎</small>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 QR Genius | Designed for the next-gen coders 💻
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Confetti Trigger -->
+  <script>
+    function startConfetti() {
+      setTimeout(() => {
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 }
+        });
+      }, 300);
+    }
+  </script>
+</body>
+</html>
